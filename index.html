@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <canvas id="canvas_id"></canvas>
+    </body>
+
+    <script src="Point.js"></script>
+    <script src="Graph.js"></script>
+    <script>
+         var canvas = document.getElementById("canvas_id");
+         canvas.width = window.innerWidth;
+         canvas.height = window.innerHeight;
+
+         var graph = new Graph(canvas);
+
+         for (var i = 0; i < 40; i++) {
+             graph.addRandomPoint();
+         }
+         graph.loop();
+    </script>
+</html>
